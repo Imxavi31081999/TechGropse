@@ -1,0 +1,170 @@
+/* Import Outfit font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* 
+  -------------------------------------
+  TYPOGRAPHY VARIABLES (Responsive)
+  -------------------------------------
+  We use clamp() for fluid typography.
+  clamp(MIN_SIZE, PREFERRED_SIZE, MAX_SIZE);
+  - MIN_SIZE: The smallest the font can get (mobile).
+  - PREFERRED_SIZE: A scalable value based on viewport width.
+  - MAX_SIZE: The largest the font can get (desktop).
+  */
+
+  /* Base Font Size */
+  --base-font-size: 1rem; /* 16px */
+
+  /* Fluid Font Sizes for Headings */
+  --h1-font-size: clamp(2.5rem, 5vw + 1rem, 4.2rem);  /* 40px to 67.2px */
+  --h2-font-size: clamp(2rem, 4vw + 1rem, 3.375rem); /* 32px to 54px (Your requested size) */
+  --h3-font-size: clamp(1.5rem, 3vw + 1rem, 2.7rem);  /* 24px to 43.2px */
+  --h4-font-size: clamp(1.25rem, 2vw + 1rem, 2.16rem); /* 20px to 34.56px */
+  --h5-font-size: clamp(1.125rem, 1.5vw + 1rem, 1.725rem); /* 18px to 27.6px */
+  --h6-font-size: clamp(1rem, 1vw + 1rem, 1.38rem);    /* 16px to 22.08px */
+
+  /* Heading Font Family & Weight */
+  --heading-font-family: 'Outfit', sans-serif;
+  --h1-font-weight: 800;
+  --h2-font-weight: 700;
+  --h3-font-weight: 600;
+  --h4-font-weight: 600;
+  --h5-font-weight: 500;
+  --h6-font-weight: 500;
+
+  /* 
+  -------------------------------------
+  COLOR & BACKGROUND VARIABLES
+  -------------------------------------
+  */
+  --text-color-white: #FFFFFF;
+  --text-color-dark: #121836;
+  --p-tag-color: #DCDCDC;
+  --primary-bg-color: #121836;
+  
+  /* Gradient Variables */
+  --primary-gradient: linear-gradient(127.57deg, #1F79BD 0%, #49B0D9 97.46%);
+  --oval-gradient: linear-gradient(82.39deg, #5FC3B9 9.8%, #1C75BB 98.53%);
+  --blur-bg-gradient: linear-gradient(0deg, rgba(21, 27, 58, 0.05), rgba(21, 27, 58, 0.05)),
+                       radial-gradient(65.11% 133.4% at 50% -30.96%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
+  
+  /* 
+  -------------------------------------
+  BORDER & SHADOW VARIABLES
+  -------------------------------------
+  */
+  --border-width: 2.43px 4.85px 4.85px 2.43px;
+  --border-style: solid;
+  --border-color: #FFFFFF;
+  --border-image-source: linear-gradient(221.31deg, rgba(255, 255, 255, 0.3) 23.39%, rgba(255, 255, 255, 0.15) 76.61%);
+  --button-border-image-source: linear-gradient(106.12deg, rgba(255, 255, 255, 0.3) 5.38%, rgba(255, 255, 255, 0.3) 48.37%, rgba(255, 255, 255, 0) 84.98%);
+  
+  --button-box-shadow: 0px 2px 8px 0px #FFFFFF40 inset;
+  --oval-backdrop-filter: blur(150px);
+  --general-backdrop-filter: blur(7.1449127197265625px);
+}
+
+/* --- Global & Base Styles --- */
+body {
+  background-color: var(--primary-bg-color);
+  font-family: var(--heading-font-family);
+  color: var(--text-color-white);
+  line-height: 1.6;
+}
+
+/* --- Responsive Typography Styles --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: var(--h4-font-weight);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+  font-weight: var(--h5-font-weight);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+  font-weight: var(--h6-font-weight);
+}
+
+p {
+  font-size: var(--base-font-size);
+  color: var(--text-color-white); /* You specified white for p tag text */
+  background-color: var(--p-tag-color); /* And #DCDCDC for its background */
+  padding: 1em; /* Added padding for readability */
+  border-radius: 4px;
+}
+
+
+/* --- Utility Classes for your other styles --- */
+.gradient-bg {
+  background: var(--primary-gradient);
+}
+
+.blur-bg {
+  background: var(--blur-bg-gradient);
+}
+
+.border-element {
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+}
+
+.border-image-element {
+  border: 1px solid;
+  border-image-source: var(--border-image-source);
+}
+
+.button {
+  background: var(--primary-gradient);
+  border: 1px solid;
+  border-image-source: var(--button-border-image-source);
+  box-shadow: var(--button-box-shadow);
+  padding: 10px 20px;
+  color: var(--text-color-white);
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px 0px #FFFFFF40 inset;
+}
+
+.oval-bg {
+  background: var(--oval-gradient);
+  backdrop-filter: var(--oval-backdrop-filter);
+  border-radius: 50%; /* Makes it a circle/oval */
+}
+
+.backdrop-filter-element {
+  backdrop-filter: var(--general-backdrop-filter);
+}
