@@ -239,6 +239,7 @@ a {
 /* --- Pricing Section Styles --- */
 .pricing-section {
   margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 
 .pricing-card {

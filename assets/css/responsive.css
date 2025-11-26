@@ -1,5 +1,5 @@
 .banner {
-    height: 100vh;
+    height: 115vh;
     background-image: url('../images/banner/hero-bg.png');
     background-size: cover;
     background-position: center;
@@ -21,12 +21,12 @@
       .bg-cyan { bottom: -10%; right: -10%; background: #0891b2; animation-delay: 2s; }
 
       /* Tabs Customization */
-      .nav-pills {
+     .tech-stack .nav-pills {
         margin-bottom: 2rem;
         gap: 0.5rem;
       }
 
-      .nav-pills .nav-link {
+      .tech-stack .nav-pills .nav-link {
         color: #94a3b8;
         background-color: #0f172a;
         border-radius: 50px;
@@ -35,12 +35,12 @@
         transition: all 0.3s ease;
       }
 
-      .nav-pills .nav-link:hover {
+     .tech-stack .nav-pills .nav-link:hover {
         background-color: #1e293b;
         color: #fff;
       }
 
-      .nav-pills .nav-link.active {
+      .tech-stack .nav-pills .nav-link.active {
         background: linear-gradient(127.57deg, #1F79BD 0%, #49B0D9 97.46%);
         color: white;
         box-shadow: 0 4px 20px rgba(31, 121, 189, 0.3);
