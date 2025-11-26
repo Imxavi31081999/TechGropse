@@ -10,26 +10,33 @@
 }
 
 @font-face {
-    font-family: 'Uxum';
-    src: url('assets/font/Uxum Grotesque Font Family/Uxum-Bold.woff2') format('woff2'),
-        url('assets/font/Uxum Grotesque Font Family/Uxum-Bold.woff') format('woff');
-    /* font-weight: bold; */
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Uxum';
+  src: url('assets/font/Uxum Grotesque Font Family/Uxum-Bold.woff2') format('woff2'),
+    url('assets/font/Uxum Grotesque Font Family/Uxum-Bold.woff') format('woff');
+  /* font-weight: bold; */
+  font-style: normal;
+  font-display: swap;
 }
 
 /* CSS Variables */
 :root {
   /* Base Font Size */
-  --base-font-size: 1rem; /* 16px */
+  --base-font-size: 1rem;
+  /* 16px */
 
   /* Fluid Font Sizes for Headings */
-  --h1-font-size: clamp(2.5rem, 5vw + 1rem, 4.8rem); /* 40px to 67.2px */
-  --h2-font-size: clamp(2rem, 4vw + 1rem, 4rem); /* 32px to 54px */
-  --h3-font-size: clamp(1.5rem, 3vw + 1rem, 3.5rem); /* 24px to 43.2px */
-  --h4-font-size: clamp(1.25rem, 2vw + 1rem, 2.16rem); /* 20px to 34.56px */
-  --h5-font-size: clamp(1.125rem, 1.5vw + 1rem, 1.725rem); /* 18px to 27.6px */
-  --h6-font-size: clamp(1rem, 1vw + 1rem, 1.38rem); /* 16px to 22.08px */
+  --h1-font-size: clamp(2.5rem, 5vw + 1rem, 4.8rem);
+  /* 40px to 67.2px */
+  --h2-font-size: clamp(2rem, 4vw + 1rem, 4rem);
+  /* 32px to 54px */
+  --h3-font-size: clamp(1.5rem, 3vw + 1rem, 3.5rem);
+  /* 24px to 43.2px */
+  --h4-font-size: clamp(1.25rem, 2vw + 1rem, 2.16rem);
+  /* 20px to 34.56px */
+  --h5-font-size: clamp(1.125rem, 1.5vw + 1rem, 1.725rem);
+  /* 18px to 27.6px */
+  --h6-font-size: clamp(1rem, 1vw + 1rem, 1.38rem);
+  /* 16px to 22.08px */
 
   /* Font Families */
   --heading-font-family: 'Uxum', sans-serif !important;
@@ -79,7 +86,12 @@ body {
 }
 
 /* --- Responsive Typography Styles --- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font-family);
   line-height: 1.2;
   /* margin-top: 1.5em; */
@@ -119,7 +131,7 @@ h6 {
 p {
   font-size: var(--base-font-size);
   color: var(--p-tag-color);
- 
+
 }
 
 p.lead {
@@ -204,4 +216,110 @@ a {
   background: linear-gradient(to right, rgba(31, 121, 189, 1), rgba(73, 176, 217, 1));
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.gred-btn2 {
+  background: var(--primary-gradient);
+  border-radius: 50px;
+  color: #fff !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 20px 46px;
+  display: inline-flex;
+  font-size: 32px;
+  transition: 0.5s all;
+  box-shadow: unset;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10px;
+  /* width: 100%; */
+}
+
+
+/* --- Pricing Section Styles --- */
+.pricing-section {
+  margin-bottom: 5rem;
+}
+
+.pricing-card {
+  background: linear-gradient(127.57deg, #1F79BD 0%, #49B0D9 97.46%);
+  border: 4px solid var(--primary-blue);
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-body {
+  padding: 2.5rem 2rem;
+  flex: 1;
+  /* background: l */
+  color: #0f172a;
+  background: white;
+  border: solid #49B0D9;
+  border-width: 5px 6px 35px 6px;
+  border-radius: 30px;
+}
+
+.pricing-price {
+  color: #0f172a;
+  font-weight: 900;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-features li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.85rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.pricing-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  /* vertically align with text */
+  width: 5px;
+  height: 5px;
+  background-color: #0f172a;
+}
+
+.pricing-footer {
+  background: var(--primary-blue);
+  /* Fallback */
+  background: var(--primary-gradient);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.pricing-title {
+  color: white;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  margin: unset !important;
 }
