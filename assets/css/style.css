@@ -324,3 +324,10 @@ a {
 .row {
   margin: unset !important;
 }
+
+.process-bg {
+  background: var(--primary-gradient);
+  padding: 50px;
+  border-radius: 30px;
+}
+

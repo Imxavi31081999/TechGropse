@@ -1342,3 +1342,70 @@ radial-gradient(65.11% 133.4% at 50% -30.96%, rgba(255, 255, 255, 0.25) 0%, rgba
     @media (max-width: 576px) {
       .blg-main { margin: 0 8px; height: 380px; }
     }
+
+      /* --- Process Timeline Section Styles --- */
+      .timeline-section {
+        /* padding: 3rem 0 5rem; */
+      }
+      
+      .timeline-step {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+      }
+      
+      .timeline-step:last-child {
+        margin-bottom: 0;
+      }
+
+      .step-content {
+        background: #0f172a; /* Dark navy card */
+        border: 1px solid rgba(73, 176, 217, 0.3);
+        border-radius: 16px 16px 16px 0px;
+        padding: 1.5rem 2rem;
+        flex: 1;
+        position: relative;
+        /* Optional: slight top margin to align visually with the "center" of the 3D button */
+        margin-top: 5px;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+
+      .step-content:hover {
+        background: #152036;
+        transform: translateY(-2px);
+      }
+      
+      /* Arrow pointing to the number */
+  
+
+    
+      .step-title {
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+
+      .step-description {
+        color: #cbd5e1;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      @media(max-width: 768px) {
+        .timeline-step {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .step-number-wrapper {
+          margin-right: 0;
+          margin-bottom: 1.5rem;
+        }
+        .step-content {
+           margin-top: 0;
+        }
+        .step-content::before {
+          display: none;
+        }
+      }
+      /* --- End Process Timeline Section Styles --- */
