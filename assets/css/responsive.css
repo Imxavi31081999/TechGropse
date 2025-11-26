@@ -1,0 +1,159 @@
+.banner {
+    height: 100vh;
+    background-image: url('../images/banner/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+ /* Background Decorations */
+      .bg-decoration {
+        position: fixed;
+        width: 40vw;
+        height: 40vw;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: 0.15;
+        z-index: -1;
+        pointer-events: none;
+      }
+      .bg-blue { top: -10%; left: -10%; background: #1e3a8a; }
+      .bg-cyan { bottom: -10%; right: -10%; background: #0891b2; animation-delay: 2s; }
+
+      /* Tabs Customization */
+      .nav-pills {
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+      }
+
+      .nav-pills .nav-link {
+        color: #94a3b8;
+        background-color: #0f172a;
+        border-radius: 50px;
+        padding: 12px 32px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: #1e293b;
+        color: #fff;
+      }
+
+      .nav-pills .nav-link.active {
+        background: linear-gradient(127.57deg, #1F79BD 0%, #49B0D9 97.46%);
+        color: white;
+        box-shadow: 0 4px 20px rgba(31, 121, 189, 0.3);
+      }
+
+      /* Glass Container */
+      .main-container-wrapper {
+        background: linear-gradient(127.57deg, #1F79BD 0%, #49B0D9 97.46%);
+        padding: 1px;
+        border-radius: 24px;
+        position: relative;
+      }
+
+      .glass-container {
+        background: #0b1221;
+        border-radius: 23px;
+        position: relative;
+        overflow: hidden;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .glass-container::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at center, #1F79BD 1px, transparent 1px);
+        background-size: 40px 40px;
+        opacity: 0.15;
+        pointer-events: none;
+      }
+
+      /* Tech Cards */
+      .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 2.5rem;
+      }
+
+      @media(min-width: 576px) { .tech-grid { grid-template-columns: repeat(3, 1fr); } }
+      @media(min-width: 768px) { .tech-grid { grid-template-columns: repeat(4, 1fr); } }
+      @media(min-width: 992px) { .tech-grid { grid-template-columns: repeat(5, 1fr); } }
+      @media(min-width: 1200px) { .tech-grid { grid-template-columns: repeat(6, 1fr); } }
+
+      .tech-card {
+        background: linear-gradient(139.76deg, rgba(73, 176, 217, 0.2) 7.71%, rgba(193, 237, 255, 0.2) 92.29%);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        height: 100%;
+      }
+
+      .tech-card:hover {
+        transform: scale(1.05);
+        border-color: rgba(255, 255, 255, 0.2);
+        background: linear-gradient(139.76deg, rgba(73, 176, 217, 0.3) 7.71%, rgba(193, 237, 255, 0.25) 92.29%);
+      }
+
+      .icon-wrapper {
+        width: 64px;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-size: 32px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      .tech-name {
+        font-weight: 500;
+        font-size: 0.95rem;
+        color: #e2e8f0;
+      }
+
+      .tech-card:hover .tech-name {
+        color: #fff;
+      }
+
+      /* Footer */
+      .footer-action {
+        margin-top: auto;
+        background: linear-gradient(127.57deg, #1F79BD 0%, #49B0D9 97.46%);
+        padding: 1.25rem 2rem;
+        color: white;
+        font-weight: 700;
+        font-size: 1.125rem;
+        border: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: filter 0.2s;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .footer-action:hover {
+        filter: brightness(110%);
+      }
+
+      /* SVG Utilities */
+      .svg-icon {
+        width: 1em;
+        height: 1em;
+      }
