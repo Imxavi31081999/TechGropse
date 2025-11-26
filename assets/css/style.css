@@ -219,20 +219,19 @@ a {
 }
 
 .gred-btn2 {
-  background: var(--primary-gradient);
-  border-radius: 50px;
-  color: #fff !important;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 20px 46px;
-  display: inline-flex;
-  font-size: 32px;
-  transition: 0.5s all;
-  box-shadow: unset;
-  justify-content: center;
-  text-align: center;
-  margin-left: 10px;
-  /* width: 100%; */
+    background: var(--primary-gradient);
+    border-radius: 50px;
+    color: #fff !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 46px;
+    display: inline-flex;
+    font-size: 20px;
+    transition: 0.5s all;
+    box-shadow: unset;
+    justify-content: center;
+    text-align: center;
+    margin: 21px;
 }
 
 
